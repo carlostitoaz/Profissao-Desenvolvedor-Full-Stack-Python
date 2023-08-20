@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <title>HTML - Tabelas</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>Tabelas</h1>
+
+        <table border="1" width="100%">
+            <thead>     <!--thead define o cabeçalho da tabela-->
+                <tr>
+                    <th>Titulo da coluna 1</th> <!--th define o cabaçalho da coluna-->
+                    <th>Titulo da coluna 2</th>
+                    <th>Titulo da coluna 3</th>  
+                </tr>
+
+                <tr>
+                    <td colspan="3">Descricão da tabela</td> <!--colspan=3 significa que o dado ocupará 3 colunas-->
+                </tr>
+
+            </thead>
+
+
+            <tbody align="center"> <!--tbody define o corpo da tabela--> <!--o /align=center/ no /tbody/ ira alinhar todo o conteudo de todas as celulas ao centro-->
+                <tr> <!--tr define a linha-->
+                    <td>1A</td> <!--td define o dado da tabela-->
+                    <td align="center">1B</td> <!--align=center alinha o conteudo no centro, no caso so o conteudo dessa celula ira ficar alinhado-->
+                    <td>1C</td>
+                </tr>
+
+                <tr align="center"> <!--align center no tr alinha todos os dados que estão nessa linha no centro-->
+                    <td>2A</td>
+                    <td>2B</td>
+                    <td>2C</td>
+                </tr>
+
+                <tr>
+                    <td>3A</td>
+                    <td colspan="2">3BC</td> <!--ocupando duas colunas-->
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3" align="right">Rodapé da tabela</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+    </body>
+
+</html>
