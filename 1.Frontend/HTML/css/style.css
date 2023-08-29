@@ -1,0 +1,188 @@
+
+* {
+	box-sizing: border-box; /* caso aumente ou diminua a /margem, padding.../ do elemento,  o conteiner permece do mesmo tamanho. O elemento ira diminuir de tamanho ou aumenter de tamanho */
+	font-family: serif;
+}
+
+html{
+	margin:0;
+	padding:0;
+	font-family:serif;
+	
+	font-size: 62.5%;/* equivale a 10px */
+}
+
+body {
+	background-color: #ffffff;
+}
+
+h1, h2, p, li{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #454545;
+}
+
+a{ 
+	color:#336;
+	text-decoration: none;
+}
+
+#primeiro-link{
+	color: #933;
+}
+
+#segundo-link a{
+	color:rgb(154, 17, 162);
+}
+
+ul{
+	background-color:rgb(230, 132, 21);
+
+	font-size: 20px;
+}
+
+li{
+	/* font-size: .5em;   equivalente a 10px referente a ul*/
+	font-size: 1em;
+} 
+
+
+p{
+	font-size: 2rem; /* equivalente ao dobro do que foi definifo no html 20px*/
+}
+
+.navegacao{
+	background-color:rgb(230, 132, 21);
+}
+
+form div{
+	background-color: #fff;
+	border:0;
+	border-bottom: 1px solid #33F;
+	/* border: 1px dashed #999; */
+	margin: 1rem 2rem;
+	padding: 2rem;
+}
+
+
+label{
+	/* margin-bottom: 10px; */
+	margin-bottom: 1rem; /* 1rem equivale a 10px pois no html foi colocado 62.5% que é a mesma coisa que 10px */
+	font-size: 1.4rem; /*equivale a 14px*/
+	font-family: sans-serif;
+	font-weight: bold; /* peso da fonte - foi colocado em negrito */
+	color: #66F;
+}
+
+input {
+	padding: 1rem;
+	/* border-radius:12px; */
+}
+
+[type="text"], [type="email"], textarea, label{
+	/* margin:30px 40px 50px 60px; cima - */	/*lado direito - em baixo - lado esquerdo */
+	/* margin-bottom: 20px; */
+	
+	display:block; /* Colocando quebra de linha */
+}
+
+/* Style the header */
+header {
+	background-color: #DDDDDD;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+	float: left;
+	/* float: right;  flutua a direita dentro do conteudo pai. A div fica encostada no canto direito do conteudo pai que ela está */
+	width: 30%;
+	
+	background: #ccc;
+	padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+article {
+	float: left;
+	padding: 20px;
+	width: 70%;
+	background-color: #f1f1f1;
+
+	/* position: relative; */
+}
+
+/* Clear floats after the columns */
+section::after {
+	background: #ccc;
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Style the footer */
+footer {
+	background-color: #777;
+	padding: 10px;
+	text-align: center; 
+	color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+	nav, article {
+	width: 100%;
+	height: auto;
+	}
+}
+
+[type="submit"]{
+	
+	/* POSIÇÃO STATIC: é definida por padrão, como ela não podemos utilizar o /top,left,right e bottom/   */
+	
+	/* 
+	position: static; 
+	*/
+	width:60px;
+
+	/* ############################### */
+
+	/* POSIÇÃO RELATIVE: posibilita usar o /top,left,right e bottom/ ele segue o conteiner pai como seu limite de margem, o conteiner pai continua mantendo o espaço que ela ocupa. */
+	
+	/* 
+	position:relative;
+	top:0px;
+	*/
+	
+	/* ############################### */
+
+	/* POSIÇÃO ABSOLUTE: posibilita usar /top, left, right e bottom/ ele vai seguir o conteiner que tiver definido como  relative, ou absolute, ou fixed. Ou seja aquele que não tiver definido como static vai ser o limite dele, desde que esteja um conteiner dentro do outro. O elemeno definido como absolute não ocupa um espaço dentro de um conteiner quando o elemento esta fora dele.
+	caso não tenha nenhum elemento definido como /absolute, relative ou fixed/ o elemento definico como absolute ira seguir como limite o tamanho da tela.
+	Para ver como funciona defina um tipo de posição para o /article/, por exemplo /relative/.
+	*/
+
+	/*  
+	position:absolute;
+	top:0px;
+	right:0px;
+
+	width: 60px;
+	*/
+
+	/* ############################### */
+
+	/* POSIÇÃO FIXADA: O posicionamento fixo é semelhante ao absoluto, mas o elemento é posicionado em relação à janela de visualização, em vez de um ancestral. Isso significa que, mesmo que o usuário role a página, o elemento permanecerá fixo em sua posição.  */
+	/*
+	position: fixed;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	*/
+}
